@@ -110,9 +110,6 @@ print('AO: {}'.format(np.average(np.where(y_test_pred==y_test,1.,0.))))
 plots_path = model_path+'/plots/iterations'
 os.mkdir(plots_path)
 
-def func_tonta(a):
-    tm.sleep(2)
-
 for n_sample in big_N:
     print('#N: {}'.format(n_sample),'--------------------------------------')    
     with Parallel(n_jobs=n_jobs) as parallel:
