@@ -113,16 +113,8 @@ os.mkdir(plots_path)
 for n_sample in big_N:
     print('#N: {}'.format(n_sample),'--------------------------------------')    
     with Parallel(n_jobs=n_jobs) as parallel:
-        parallel(delayed(func_tonta)(2)  for i in range(0,n_averaging))
-        '''parallel(delayed(fn.fit_function_2)(learning_rate, n_sample, plot=True, max_iter=max_iter, n_epochs=1000,
+        parallel(delayed(fn.fit_function_2)(learning_rate, n_sample, plot=True, max_iter=max_iter, n_epochs=1000,
                     max_subtraining=max_subtraining, original=original, X_test=X_test, y_test=y_test,
                     hot_start=hot_start, deleting=deleting, threshold=threshold, model_path=model_path,
-                    step=i)  for i in range(0,n_averaging))  '''
-        
-        
-        
-        
-        
-        
-        
-        
+                    step=i)  for i in range(0,n_averaging))
+      
